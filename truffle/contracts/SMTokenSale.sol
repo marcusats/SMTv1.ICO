@@ -32,13 +32,13 @@ contract SMTokenSale {
         emit Sell(msg.sender, _numberOfTokens);
     }
 
-    function endSale() public {
+    /*function endSale() public {
 
         require(msg.sender == admin);
         require(tokenContract.transfer(admin ,address(this).balance));
 
-        selfdestruct(payable(admin));
+        payable(admin).transfer(address(this).balance);
       
-    }
+    }*/
 
 }
